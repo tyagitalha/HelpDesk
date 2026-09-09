@@ -14,9 +14,6 @@ const createTicket = asyncHandler(async (req, res) => {
         throw new ApiError(400, "All field are required")
     }
 
-    console.log("BODY:", req.body)
-    console.log("USER:", req.user)
-
     const ticket = await Ticket.create(
         {
             title,
@@ -51,8 +48,6 @@ const getAllTicket = asyncHandler(async (req, res) => {
         .populate("createdBy", "fullName email")
         .populate("assignTo", "fullName email")
         .sort({ createdAt: -1 });
-
-    console.log("ticket", ticketId);
 
 
 
@@ -112,13 +107,8 @@ const getTicket = asyncHandler(async (req, res) => {
             .limit(limitNumber)
             .sort({ createdAt: -1 })
 
-        console.log("filter:", filter);
-        console.log("ticket:", ticket);
 
-
-
-
-        return res.status(200).json(new ApiResponse(200, { tickets: ticket }, "Tickets fetched successfully"))
+        return res.status(200).json(new ApiResponse(200, { ticket }, "Tickets fetched successfully"))
     } catch (error) {
 
         throw error instanceof ApiError ? error : new ApiError(500, "Failed to fetch tickets")
@@ -140,7 +130,7 @@ const getOneTicket = asyncHandler(async (req, res) => {
 
 
         if (!ticket) {
-            throw new ApiError(400, "ticket not find")
+            throw new ApiError(404, "ticket not find")
         }
 
         return res.status(200)
@@ -211,7 +201,7 @@ const deleteTicket = asyncHandler(async (req, res) => {
     return res.status(200).json(
         new ApiResponse(
             200,
-            {},
+            {ticket},
             "Ticket deleted successfully"
         )
     );
