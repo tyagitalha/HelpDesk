@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
    
     let userData
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/v1/users/current-user", {
+        const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/users/current-user", {
             method: "GET",
             credentials: "include"
         }) 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     try {
-        const ticketResponse = await fetch("http://127.0.0.1:8000/api/v1/ticket/getAllTicket", {
+        const ticketResponse = await fetch("https://helpdesk-3b70.onrender.com/api/v1/ticket/getAllTicket", {
             method: "GET",
             credentials: "include"
         })
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logout.addEventListener("click", async () => {
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/v1/users/logout", {
+            const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/users/logout", {
                 method: "POST",
                 credentials: "include"
             })
