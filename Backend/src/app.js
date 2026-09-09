@@ -24,5 +24,6 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/ticket", ticketRouter);
 app.use("/api/v1/admins", adminRouter);
 app.use("/api/v1/comment", commentRouter);
+// app.use("/api/v1",userRouter)
 app.use(errorHandler)
 export default app;
