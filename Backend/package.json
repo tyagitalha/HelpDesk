@@ -11,11 +11,9 @@
   "main": "index.js",
   "scripts": {
     "dev" : "nodemon src/index.js",
-<<<<<<< HEAD
+
     "start": "node src/index.js"
-=======
-    "start" : "node src/index.js"
->>>>>>> c4730d4a208a62db83b6a30e30bd31c01db17830
+
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
