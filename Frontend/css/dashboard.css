@@ -1,0 +1,816 @@
+/* ==================================================
+   USER DASHBOARD
+   Premium Sky / Glass Theme
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #18364f;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(36, 91, 139, 0.16),
+            rgba(128, 184, 221, 0.14),
+            rgba(241, 248, 253, 0.94)
+        ),
+        url("../images/sky.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+header {
+    width: 100%;
+    padding: 12px 12px 0;
+}
+
+nav {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 15px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.88);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px rgba(39, 78, 111, 0.10);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* Logo */
+
+nav > a {
+    color: #173f60;
+
+    font-size: 17px;
+    font-weight: 750;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* Navbar links */
+
+nav > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav > div a {
+    padding: 7px 8px;
+
+    color: #5b7489;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: 550;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+nav > div a:hover {
+    color: #245b87;
+    background: rgba(226, 240, 251, 0.80);
+}
+
+
+/* ==================================================
+   LOGOUT BUTTON
+================================================== */
+
+#logoutBtn {
+    min-height: 34px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #2f6d9e;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(47, 109, 158, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#logoutBtn:hover {
+    background: #275d88;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 18px rgba(47, 109, 158, 0.22);
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main {
+    width: min(100% - 26px, 1120px);
+    margin: 0 auto;
+
+    padding-bottom: 50px;
+}
+
+
+/* ==================================================
+   WELCOME SECTION
+================================================== */
+
+main > section:first-child {
+    position: relative;
+
+    padding: 42px 5px 28px;
+}
+
+
+/* Small label */
+
+main > section:first-child::before {
+    content: "PERSONAL DASHBOARD";
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 6px 10px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.82);
+
+    border-radius: 20px;
+
+    color: #477596;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* Welcome title */
+
+main > section:first-child h1 {
+    color: #173b59;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 31px;
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* User name */
+
+#username {
+    color: #3979a8;
+
+    font-weight: 750;
+}
+
+
+/* Create ticket button */
+
+main > section:first-child > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+
+    margin-top: 19px;
+
+    padding: 0 18px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    border-radius: 23px;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    box-shadow:
+        0 9px 20px rgba(50, 111, 159, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+main > section:first-child > a:hover {
+    background: #285e89;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(50, 111, 159, 0.24);
+}
+
+
+/* ==================================================
+   STATS
+================================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Stat card */
+
+.stats > div {
+    position: relative;
+
+    padding: 18px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.76);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.88);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 9px 25px rgba(38, 78, 111, 0.09);
+
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+
+/* Accent line */
+
+.stats > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #5790b7;
+}
+
+
+/* Stat title */
+
+.stats h3 {
+    margin-bottom: 9px;
+
+    color: #6a8193;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* Stat number */
+
+.stats p {
+    color: #1e4f72;
+
+    font-size: 29px;
+    line-height: 1;
+
+    font-weight: 750;
+}
+
+
+/* ==================================================
+   RECENT TICKETS CONTAINER
+================================================== */
+
+main > section:last-child {
+    padding: 20px 16px;
+
+    background: rgba(255, 255, 255, 0.77);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.90);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 11px 30px rgba(38, 78, 111, 0.10);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Section heading */
+
+main > section:last-child > h2 {
+    margin-bottom: 16px;
+
+    color: #204865;
+
+    font-size: 21px;
+
+    font-weight: 650;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* ==================================================
+   RECENT TICKET LIST
+================================================== */
+
+#recentTicket {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* ==================================================
+   TICKET CARD
+   Generated by JavaScript
+================================================== */
+
+.ticket-item {
+    position: relative;
+
+    padding: 16px;
+
+    background:
+        rgba(240, 248, 254, 0.84);
+
+    border:
+        1px solid rgba(75, 125, 160, 0.09);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Left accent */
+
+.ticket-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #5790b7;
+}
+
+
+.ticket-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(38, 78, 111, 0.08);
+}
+
+
+/* Ticket title */
+
+.ticket-item p:first-child {
+    margin: 0 0 8px;
+}
+
+.ticket-item p:first-child strong {
+    display: block;
+
+    color: #294f6c;
+
+    font-size: 14px;
+    line-height: 1.35;
+
+    font-weight: 650;
+}
+
+
+/* Ticket information */
+
+.ticket-item p {
+    margin: 5px 0;
+
+    color: #668095;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   STATUS COLORS
+================================================== */
+
+.status-open {
+    color: #3f7b4e;
+    font-weight: 650;
+}
+
+.status-in-progress {
+    color: #8a743e;
+    font-weight: 650;
+}
+
+.status-resolved {
+    color: #34764d;
+    font-weight: 650;
+}
+
+.status-closed {
+    color: #6e7779;
+    font-weight: 650;
+}
+
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+#recentTicket:empty::before {
+    content: "No tickets found.";
+
+    display: block;
+
+    padding: 30px 10px;
+
+    text-align: center;
+
+    color: #8194a2;
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 650px) {
+
+    header {
+        padding: 18px 24px 0;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav > a {
+        font-size: 19px;
+    }
+
+    nav > div {
+        gap: 8px;
+    }
+
+    nav > div a {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    #logoutBtn {
+        min-height: 36px;
+        padding: 0 14px;
+        font-size: 10px;
+    }
+
+    main {
+        width: min(100% - 48px, 1120px);
+    }
+
+
+    /* Welcome */
+
+    main > section:first-child {
+        padding: 58px 24px 34px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 41px;
+    }
+
+    main > section:first-child::before {
+        font-size: 8px;
+    }
+
+
+    /* Button */
+
+    main > section:first-child > a {
+        min-height: 46px;
+
+        padding: 0 21px;
+
+        font-size: 12px;
+    }
+
+
+    /* Stats */
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .stats > div {
+        padding: 20px;
+    }
+
+    .stats h3 {
+        font-size: 12px;
+    }
+
+    .stats p {
+        font-size: 31px;
+    }
+
+
+    /* Recent tickets */
+
+    main > section:last-child {
+        padding: 26px;
+    }
+
+    main > section:last-child > h2 {
+        font-size: 23px;
+    }
+
+    .ticket-item {
+        padding: 18px;
+    }
+
+    .ticket-item p {
+        font-size: 12px;
+    }
+
+    .ticket-item p:first-child strong {
+        font-size: 15px;
+    }
+}
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 950px) {
+
+    header {
+        padding-top: 22px;
+    }
+
+    main {
+        width: min(100% - 70px, 1120px);
+    }
+
+    main > section:first-child {
+        padding: 70px 45px 38px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 48px;
+    }
+
+    main > section:first-child p {
+        font-size: 15px;
+    }
+
+    .stats > div {
+        padding: 23px;
+    }
+
+    .stats p {
+        font-size: 34px;
+    }
+
+    main > section:last-child {
+        padding: 30px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 9px 9px 0;
+    }
+
+    nav {
+        padding: 11px 11px;
+        border-radius: 15px;
+    }
+
+    nav > a {
+        font-size: 15px;
+    }
+
+    nav > div {
+        gap: 2px;
+    }
+
+    nav > div a {
+        padding: 6px 5px;
+        font-size: 8px;
+    }
+
+    #logoutBtn {
+        min-height: 32px;
+        padding: 0 9px;
+        font-size: 8px;
+    }
+
+
+    main {
+        width: min(100% - 20px, 1120px);
+    }
+
+
+    /* Welcome */
+
+    main > section:first-child {
+        padding: 40px 3px 25px;
+    }
+
+    main > section:first-child::before {
+        margin-bottom: 10px;
+        padding: 5px 8px;
+        font-size: 7px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 29px;
+        letter-spacing: -0.5px;
+    }
+
+    #username {
+        font-size: 29px;
+    }
+
+    main > section:first-child > a {
+        min-height: 41px;
+
+        margin-top: 17px;
+
+        padding: 0 16px;
+
+        font-size: 10px;
+    }
+
+
+    /* Stats */
+
+    .stats {
+        gap: 8px;
+    }
+
+    .stats > div {
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    .stats h3 {
+        font-size: 10px;
+    }
+
+    .stats p {
+        font-size: 24px;
+    }
+
+
+    /* Recent */
+
+    main > section:last-child {
+        padding: 18px 13px;
+        border-radius: 17px;
+    }
+
+    main > section:last-child > h2 {
+        font-size: 20px;
+    }
+
+    .ticket-item {
+        padding: 14px;
+    }
+
+    .ticket-item p:first-child strong {
+        font-size: 13px;
+    }
+
+    .ticket-item p {
+        font-size: 10px;
+    }
+}

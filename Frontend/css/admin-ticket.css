@@ -1,0 +1,1937 @@
+/* ==================================================
+   ADMIN TICKETS
+   Premium Sky Theme
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #18364f;
+
+    background:
+        linear-gradient(180deg,
+            rgba(36, 91, 139, 0.14),
+            rgba(128, 184, 221, 0.13),
+            rgba(241, 248, 253, 0.94)),
+        url("../images/sky.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+header {
+    padding: 14px 14px 0;
+}
+
+nav {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 17px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px rgba(39, 78, 111, 0.10);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+nav>a {
+    color: #173f60;
+
+    font-size: 17px;
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+nav>div {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+nav>div a {
+    padding: 8px 9px;
+
+    color: #5b7489;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 550;
+
+    transition: 0.2s ease;
+}
+
+nav>div a:hover {
+    color: #245b87;
+    background: rgba(225, 239, 250, 0.8);
+}
+
+
+/* ==================================================
+   LOGOUT
+================================================== */
+
+#logoutBtn {
+    min-height: 36px;
+
+    padding: 0 13px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #2f6d9e;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#logoutBtn:hover {
+    background: #275d88;
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main {
+    width: min(100% - 28px, 1150px);
+    margin: 0 auto;
+
+    padding: 32px 0 55px;
+}
+
+
+/* ==================================================
+   PAGE TITLE
+================================================== */
+
+main>section:first-child {
+    margin-bottom: 20px;
+}
+
+main>section:first-child h1 {
+    color: #173d5c;
+
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* ==================================================
+   FILTERS
+================================================== */
+
+.filters {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+
+    margin-bottom: 20px;
+    padding: 17px;
+
+    background: rgba(255, 255, 255, 0.80);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.92);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 28px rgba(39, 78, 111, 0.09);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Search */
+
+#searchInput {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid rgba(77, 126, 161, 0.12);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(232, 244, 252, 0.88);
+
+    color: #29445d;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#searchInput::placeholder {
+    color: #7b90a1;
+}
+
+#searchInput:focus {
+    background: #ffffff;
+
+    border-color: #79a4c4;
+
+    box-shadow:
+        0 0 0 3px rgba(75, 130, 169, 0.10);
+}
+
+
+/* Selects */
+
+.filters select {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid rgba(77, 126, 161, 0.12);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(232, 244, 252, 0.88);
+
+    color: #29445d;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.filters select:focus {
+    background: #ffffff;
+
+    border-color: #79a4c4;
+
+    box-shadow:
+        0 0 0 3px rgba(75, 130, 169, 0.10);
+}
+
+
+/* Apply */
+
+#applybtn {
+    width: 100%;
+    height: 46px;
+
+    border: none;
+    border-radius: 23px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(50, 111, 159, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#applybtn:hover {
+    background: #285d88;
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   TICKET LIST
+================================================== */
+
+#ticketsList {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ==================================================
+   TICKET CARD
+================================================== */
+
+.ticket-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.94);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(39, 78, 111, 0.08);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(39, 78, 111, 0.11);
+}
+
+
+/* ==================================================
+   TICKET INFORMATION
+================================================== */
+
+.ticket-info {
+    min-width: 0;
+}
+
+.ticket-id {
+    margin-bottom: 7px;
+
+    color: #8498a8;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.ticket-title {
+    margin-bottom: 7px;
+
+    color: #244b68;
+
+    font-size: 17px;
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+.ticket-description {
+    color: #647c8f;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    display: -webkit-box;
+    /* -webkit-line-clamp: 2; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   TICKET META
+================================================== */
+
+.ticket-meta {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* ==================================================
+   BADGES
+================================================== */
+
+.ticket-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 29px;
+
+    padding: 0 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   CATEGORY
+================================================== */
+
+.badge-category {
+    background: #e4f1f8;
+    color: #49728e;
+}
+
+
+/* ==================================================
+   PRIORITY
+================================================== */
+
+.badge-low {
+    background: #e2f0e7;
+    color: #4b7959;
+}
+
+.badge-medium {
+    background: #f2ecd9;
+    color: #816e3d;
+}
+
+.badge-high {
+    background: #f3dfdc;
+    color: #985d55;
+}
+
+
+/* ==================================================
+   STATUS
+================================================== */
+
+.badge-open {
+    background: #e0f0e4;
+    color: #3d774a;
+}
+
+.badge-in-progress {
+    background: #f2ecd9;
+    color: #806d3c;
+}
+
+.badge-resolved {
+    background: #dff0e5;
+    color: #36724a;
+}
+
+.badge-closed {
+    background: #e8ecee;
+    color: #687477;
+}
+
+
+/* ==================================================
+   VIEW BUTTON
+================================================== */
+
+.ticket-view {
+    min-height: 34px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid rgba(50, 111, 159, 0.30);
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: #326b98;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ticket-view:hover {
+    background: #326f9f;
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+#ticketsList:empty::before {
+    content: "No tickets found.";
+
+    display: block;
+
+    padding: 45px 10px;
+
+    text-align: center;
+
+    color: #7e92a2;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 650px) {
+
+    header {
+        padding: 18px 24px 0;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav>a {
+        font-size: 19px;
+    }
+
+    nav>div {
+        gap: 9px;
+    }
+
+    nav>div a {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    #logoutBtn {
+        min-height: 37px;
+        padding: 0 14px;
+        font-size: 10px;
+    }
+
+
+    main {
+        width: min(100% - 48px, 1150px);
+
+        padding-top: 40px;
+    }
+
+    main>section:first-child h1 {
+        font-size: 40px;
+    }
+
+
+    /* Filters */
+
+    .filters {
+        grid-template-columns:
+            2fr 1fr 1fr;
+
+        padding: 18px;
+    }
+
+    #searchInput {
+        grid-column: 1 / -1;
+    }
+
+    #applybtn {
+        grid-column: 1 / -1;
+    }
+
+
+    /* Cards */
+
+    .ticket-card {
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 24px;
+
+        padding: 20px;
+    }
+
+    .ticket-info {
+        flex: 1;
+    }
+
+    .ticket-meta {
+        justify-content: flex-end;
+
+        min-width: 280px;
+    }
+
+    .ticket-title {
+        font-size: 18px;
+    }
+
+    .ticket-description {
+        font-size: 13px;
+    }
+
+    .ticket-badge {
+        min-height: 30px;
+        font-size: 11px;
+    }
+
+    .ticket-view {
+        min-height: 35px;
+        font-size: 12px;
+    }
+}
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 950px) {
+
+    header {
+        padding-top: 22px;
+    }
+
+    main {
+        width: min(100% - 70px, 1150px);
+    }
+
+    main>section:first-child h1 {
+        font-size: 45px;
+    }
+
+
+    /* One clean filter row */
+
+    .filters {
+        grid-template-columns:
+            minmax(260px, 2fr) 1fr 1fr 1fr auto;
+
+        align-items: center;
+    }
+
+    #searchInput {
+        grid-column: auto;
+    }
+
+    #applybtn {
+        grid-column: auto;
+
+        width: auto;
+
+        min-width: 105px;
+    }
+
+
+    /* Larger cards */
+
+    .ticket-card {
+        padding: 21px 22px;
+
+        border-radius: 19px;
+    }
+
+    .ticket-title {
+        font-size: 18px;
+    }
+
+    .ticket-description {
+        font-size: 14px;
+    }
+
+    .ticket-badge {
+        min-height: 31px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+    .ticket-view {
+        min-height: 36px;
+
+        padding: 0 17px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 9px 9px 0;
+    }
+
+    nav {
+        padding: 11px;
+        border-radius: 15px;
+    }
+
+    nav>a {
+        font-size: 15px;
+    }
+
+    nav>div {
+        gap: 2px;
+    }
+
+    nav>div a {
+        padding: 6px 5px;
+        font-size: 8px;
+    }
+
+    #logoutBtn {
+        min-height: 32px;
+        padding: 0 9px;
+        font-size: 8px;
+    }
+
+
+    main {
+        width: min(100% - 20px, 1150px);
+
+        padding-top: 24px;
+    }
+
+    main>section:first-child h1 {
+        font-size: 29px;
+    }
+
+
+    .filters {
+        padding: 13px;
+        gap: 9px;
+        border-radius: 17px;
+    }
+
+    #searchInput,
+    .filters select,
+    #applybtn {
+        height: 44px;
+    }
+
+
+    .ticket-card {
+        padding: 16px;
+
+        gap: 13px;
+
+        border-radius: 16px;
+    }
+
+    .ticket-id {
+        font-size: 10px;
+    }
+
+    .ticket-title {
+        font-size: 16px;
+    }
+
+    .ticket-description {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .ticket-meta {
+        gap: 7px;
+    }
+
+    .ticket-badge {
+        min-height: 28px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+    }
+
+    .ticket-view {
+        min-height: 33px;
+
+        padding: 0 14px;
+
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   ADMIN TICKET DETAIL
+   Premium Sky / Glass UI
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #1d3b54;
+
+    background:
+        linear-gradient(180deg,
+            rgba(37, 91, 139, 0.16),
+            rgba(119, 178, 217, 0.12),
+            rgba(240, 248, 254, 0.96)),
+        url("../images/sky.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    width: 100%;
+    padding: 12px 12px 0;
+}
+
+nav {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    border: 1px solid rgba(255, 255, 255, 0.94);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px rgba(39, 77, 108, 0.10);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+nav>a {
+    color: #173f60;
+
+    font-size: 17px;
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+nav>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+nav>div a {
+    padding: 8px 9px;
+
+    color: #5b7488;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: 550;
+
+    transition: 0.2s ease;
+}
+
+nav>div a:hover {
+    color: #245c88;
+    background: rgba(227, 241, 251, 0.85);
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+#logoutBtn {
+    min-height: 35px;
+
+    padding: 0 13px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(50, 111, 159, 0.16);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#logoutBtn:hover {
+    background: #285d88;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    width: min(100% - 24px, 1050px);
+
+    margin: 0 auto;
+
+    padding: 24px 0 55px;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+main>section:first-child {
+    margin-bottom: 15px;
+}
+
+main>section:first-child a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 10px;
+
+    color: #3e7298;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+main>section:first-child a:hover {
+    background: rgba(255, 255, 255, 0.70);
+    color: #285b83;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+#ticketDetails,
+.admin-controls,
+main>section:last-child {
+    background: rgba(255, 255, 255, 0.84);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.94);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 32px rgba(38, 77, 108, 0.10);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   TICKET DETAILS
+========================================================= */
+
+#ticketDetails {
+    margin-bottom: 16px;
+
+    padding: 21px 18px;
+}
+
+
+/* JS generated ticket content */
+
+#ticketDetails h2 {
+    margin-bottom: 10px;
+
+    color: #204a69;
+
+    font-size: 23px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+#ticketDetails p {
+    margin: 7px 0;
+
+    color: #60788b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.ticket-id {
+    margin-bottom: 8px;
+
+    color: #8396a5;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TICKET META
+========================================================= */
+
+.ticket-meta {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 16px;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 30px;
+
+    padding: 0 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+/* Category */
+
+.badge-category {
+    background: #e4f1f8;
+    color: #47728d;
+}
+
+
+/* Priority */
+
+.badge-low {
+    background: #e3f1e8;
+    color: #4d7b5b;
+}
+
+.badge-medium {
+    background: #f2ecd9;
+    color: #816e3d;
+}
+
+.badge-high {
+    background: #f3dfdc;
+    color: #985c54;
+}
+
+
+/* Status */
+
+.badge-open {
+    background: #dff0e4;
+    color: #3d774a;
+}
+
+.badge-in-progress {
+    background: #f2ecd8;
+    color: #806e3c;
+}
+
+.badge-resolved {
+    background: #def0e5;
+    color: #35734a;
+}
+
+.badge-closed {
+    background: #e8ecee;
+    color: #697478;
+}
+
+
+/* =========================================================
+   MANAGE TICKET
+========================================================= */
+
+.admin-controls {
+    margin-bottom: 16px;
+
+    padding: 21px 18px;
+}
+
+.admin-controls h2 {
+    margin-bottom: 18px;
+
+    color: #204a69;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+}
+
+
+/* Controls wrapper */
+
+.admin-controls>div {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+}
+
+
+/* Labels */
+
+.admin-controls label {
+    margin-top: 7px;
+
+    color: #3c6078;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+/* Selects */
+
+.admin-controls select {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid rgba(76, 126, 161, 0.13);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        rgba(232, 244, 252, 0.90);
+
+    color: #29445d;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-controls select:focus {
+    background: #ffffff;
+
+    border-color: #78a3c5;
+
+    box-shadow:
+        0 0 0 3px rgba(72, 126, 165, 0.10);
+}
+
+
+/* =========================================================
+   UPDATE BUTTON
+========================================================= */
+
+#updateTicketBtn {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 16px;
+
+    border: none;
+    border-radius: 24px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 19px rgba(50, 111, 159, 0.19);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#updateTicketBtn:hover {
+    background: #285d88;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 24px rgba(50, 111, 159, 0.23);
+}
+
+
+/* =========================================================
+   UPDATE MESSAGE
+========================================================= */
+
+#updateMessage {
+    min-height: 18px;
+
+    margin-top: 10px;
+
+    color: #4d795c;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CONVERSATION
+========================================================= */
+
+main>section:last-child {
+    padding: 21px 18px;
+}
+
+main>section:last-child>h2 {
+    margin-bottom: 18px;
+
+    color: #204a69;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COMMENTS
+========================================================= */
+
+#commentsList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   COMMENT CARD
+========================================================= */
+
+.comment {
+    position: relative;
+
+    padding: 15px 15px 15px 19px;
+
+    background:
+        rgba(239, 248, 253, 0.90);
+
+    border:
+        1px solid rgba(77, 126, 161, 0.10);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.comment:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(39, 78, 111, 0.07);
+}
+
+
+/* Accent line */
+
+.comment::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #5790b7;
+}
+
+
+/* Author */
+
+.comment h4 {
+    margin-bottom: 6px;
+
+    color: #315a76;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* Message */
+
+.comment p {
+    margin: 0;
+
+    color: #5e7588;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Time */
+
+.comment small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #8799a6;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   COMMENT FORM
+========================================================= */
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#commentInput {
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 13px;
+
+    border:
+        1px solid rgba(76, 126, 161, 0.13);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background:
+        rgba(232, 244, 252, 0.90);
+
+    color: #29445d;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#commentInput::placeholder {
+    color: #7c91a2;
+}
+
+#commentInput:focus {
+    background: #ffffff;
+
+    border-color: #78a3c5;
+
+    box-shadow:
+        0 0 0 3px rgba(72, 126, 165, 0.10);
+}
+
+
+/* =========================================================
+   SEND COMMENT
+========================================================= */
+
+#commentBtn {
+    width: 100%;
+    height: 45px;
+
+    border: none;
+    border-radius: 24px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(50, 111, 159, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#commentBtn:hover {
+    background: #285d88;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 650px) {
+
+    header {
+        padding: 18px 24px 0;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav>a {
+        font-size: 19px;
+    }
+
+    nav>div {
+        gap: 8px;
+    }
+
+    nav>div a {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    #logoutBtn {
+        min-height: 37px;
+        padding: 0 14px;
+        font-size: 10px;
+    }
+
+
+    main {
+        width: min(100% - 48px, 1050px);
+
+        padding-top: 30px;
+    }
+
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 27px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 27px;
+    }
+
+
+    #ticketDetails p {
+        font-size: 13px;
+    }
+
+
+    .ticket-meta {
+        gap: 10px;
+    }
+
+
+    .badge {
+        min-height: 31px;
+
+        padding: 0 13px;
+
+        font-size: 11px;
+    }
+
+
+    /* Manage controls in one row */
+
+    .admin-controls>div {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        column-gap: 14px;
+        row-gap: 6px;
+
+        align-items: end;
+    }
+
+
+    .admin-controls label {
+        margin-top: 0;
+    }
+
+
+    #updateTicketBtn {
+        height: 47px;
+    }
+
+
+    #commentForm {
+        flex-direction: row;
+
+        align-items: flex-end;
+    }
+
+
+    #commentInput {
+        flex: 1;
+
+        min-height: 75px;
+    }
+
+
+    #commentBtn {
+        width: 145px;
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 950px) {
+
+    header {
+        padding-top: 22px;
+    }
+
+    main {
+        width: min(100% - 70px, 1050px);
+    }
+
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 30px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 30px;
+    }
+
+
+    #ticketDetails p {
+        max-width: 900px;
+
+        font-size: 14px;
+    }
+
+
+    .admin-controls h2,
+    main>section:last-child>h2 {
+        font-size: 24px;
+    }
+
+
+    .admin-controls select {
+        height: 47px;
+
+        font-size: 13px;
+    }
+
+
+    .comment {
+        padding: 16px 17px 16px 20px;
+    }
+
+
+    .comment h4 {
+        font-size: 13px;
+    }
+
+
+    .comment p {
+        font-size: 13px;
+    }
+
+
+    .comment small {
+        font-size: 9px;
+    }
+
+
+    #commentInput {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 9px 9px 0;
+    }
+
+    nav {
+        padding: 11px;
+
+        border-radius: 15px;
+    }
+
+    nav>a {
+        font-size: 15px;
+    }
+
+    nav>div {
+        gap: 2px;
+    }
+
+    nav>div a {
+        padding: 6px 5px;
+
+        font-size: 8px;
+    }
+
+    #logoutBtn {
+        min-height: 32px;
+
+        padding: 0 9px;
+
+        font-size: 8px;
+    }
+
+
+    main {
+        width: min(100% - 20px, 1050px);
+
+        padding-top: 21px;
+    }
+
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 17px 14px;
+
+        border-radius: 17px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 21px;
+    }
+
+
+    #ticketDetails p {
+        font-size: 12px;
+    }
+
+
+    .ticket-meta {
+        gap: 8px;
+
+        margin-top: 13px;
+    }
+
+
+    .badge {
+        min-height: 29px;
+
+        padding: 0 11px;
+
+        font-size: 10px;
+    }
+
+
+    .admin-controls h2,
+    main>section:last-child>h2 {
+        font-size: 20px;
+    }
+
+
+    .admin-controls select {
+        height: 44px;
+
+        font-size: 12px;
+    }
+
+
+    #updateTicketBtn {
+        height: 44px;
+
+        font-size: 12px;
+    }
+
+
+    .comment {
+        padding: 14px 13px 14px 17px;
+
+        border-radius: 14px;
+    }
+
+
+    .comment h4 {
+        font-size: 12px;
+    }
+
+
+    .comment p {
+        font-size: 11px;
+    }
+
+
+    .comment small {
+        font-size: 8px;
+    }
+
+
+    #commentInput {
+        min-height: 82px;
+
+        font-size: 12px;
+    }
+
+
+    #commentBtn {
+        height: 44px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   DELETE COMMENT BUTTON
+========================================= */
+
+.delete-comment {
+    margin-top: 12px;
+
+    padding: 7px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(220, 70, 70, 0.10);
+
+    color: #c53f3f;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.delete-comment:hover {
+    background: #c53f3f;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 12px rgba(197, 63, 63, 0.18);
+}
+
+
+.delete-comment:active {
+    transform: translateY(0);
+}
+
+
+.delete-comment:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}

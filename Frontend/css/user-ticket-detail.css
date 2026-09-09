@@ -1,0 +1,1103 @@
+/* ==================================================
+   TICKET DETAIL PAGE
+   Premium Sky / Glass Theme
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #18364f;
+
+    background:
+        linear-gradient(180deg,
+            rgba(36, 91, 139, 0.16),
+            rgba(128, 184, 221, 0.14),
+            rgba(241, 248, 253, 0.94)),
+        url("../images/sky.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ==================================================
+   COMMON
+================================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ==================================================
+   HEADER / NAVBAR
+================================================== */
+
+header {
+    width: 100%;
+    padding: 12px 12px 0;
+}
+
+nav {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 15px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px rgba(39, 78, 111, 0.10);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* Logo */
+
+nav>a {
+    color: #173f60;
+
+    font-size: 17px;
+    font-weight: 750;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* Navbar links */
+
+nav>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav>div a {
+    padding: 7px 8px;
+
+    color: #5b7489;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: 550;
+
+    transition: 0.2s ease;
+}
+
+nav>div a:hover {
+    color: #245b87;
+
+    background: rgba(226, 240, 251, 0.8);
+}
+
+
+/* ==================================================
+   LOGOUT
+================================================== */
+
+#logoutBtn {
+    min-height: 34px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #2f6d9e;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(47, 109, 158, 0.18);
+
+    transition: 0.2s ease;
+}
+
+#logoutBtn:hover {
+    background: #275d88;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main {
+    width: min(100% - 26px, 1050px);
+
+    margin: 0 auto;
+
+    padding:
+        22px 0 50px;
+}
+
+
+/* ==================================================
+   BACK LINK
+================================================== */
+
+main>section:first-child {
+    margin-bottom: 12px;
+}
+
+main>section:first-child a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 10px;
+
+    color: #3c7097;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+main>section:first-child a:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+    color: #285a82;
+}
+
+
+/* ==================================================
+   TICKET DETAILS
+================================================== */
+
+#ticketDetails {
+    margin-bottom: 14px;
+
+    padding: 20px 17px;
+
+    background: rgba(255, 255, 255, 0.79);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 11px 30px rgba(38, 78, 111, 0.09);
+
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+
+/* JS generated content */
+
+#ticketDetails h1,
+#ticketDetails h2,
+#ticketDetails h3 {
+    color: #214a68;
+
+    line-height: 1.25;
+}
+
+#ticketDetails h2 {
+    margin-bottom: 10px;
+
+    font-size: 22px;
+    font-weight: 650;
+
+    letter-spacing: -0.3px;
+}
+
+#ticketDetails p {
+    margin: 7px 0;
+
+    color: #60798d;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* ==================================================
+   TICKET ID
+================================================== */
+
+.ticket-id {
+    margin-bottom: 8px;
+
+    color: #7890a1;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   TICKET META
+================================================== */
+
+.ticket-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-top: 13px;
+}
+
+
+/* ==================================================
+   BADGES
+================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 25px;
+
+    padding:
+        0 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Category */
+
+.badge-category {
+    background: #e5f1f8;
+    color: #47728e;
+}
+
+
+/* Priority */
+
+.badge-low {
+    background: #e5f2e9;
+    color: #4d7d5d;
+}
+
+.badge-medium {
+    background: #f2eddc;
+    color: #826f3e;
+}
+
+.badge-high {
+    background: #f3dfdc;
+    color: #975b53;
+}
+
+
+/* Status */
+
+.badge-open {
+    background: #e0f0e4;
+    color: #3e794b;
+}
+
+.badge-in-progress {
+    background: #f2ecd8;
+    color: #806e3b;
+}
+
+.badge-resolved {
+    background: #dff0e5;
+    color: #36734b;
+}
+
+.badge-closed {
+    background: #e9ecee;
+    color: #697478;
+}
+
+
+/* ==================================================
+   ADMIN CONTROLS
+================================================== */
+
+.admin-controls {
+    margin-bottom: 14px;
+
+    padding: 20px 17px;
+
+    background: rgba(255, 255, 255, 0.79);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 11px 30px rgba(38, 78, 111, 0.09);
+
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+
+/* Heading */
+
+.admin-controls h2 {
+    margin-bottom: 18px;
+
+    color: #214a68;
+
+    font-size: 21px;
+    font-weight: 650;
+}
+
+
+/* Form grid */
+
+.admin-controls>div {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+}
+
+
+/* Label */
+
+.admin-controls label {
+    margin-top: 8px;
+
+    color: #365b75;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* Input / Select / Textarea */
+
+.admin-controls input,
+.admin-controls select,
+.admin-controls textarea {
+    width: 100%;
+
+    border:
+        1px solid rgba(78, 126, 160, 0.12);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        rgba(232, 244, 252, 0.84);
+
+    color: #29445d;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Input + Select */
+
+.admin-controls input,
+.admin-controls select {
+    height: 44px;
+
+    padding: 0 12px;
+}
+
+
+/* Textarea */
+
+.admin-controls textarea {
+    min-height: 125px;
+
+    padding: 11px 12px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+}
+
+
+/* Focus */
+
+.admin-controls input:focus,
+.admin-controls select:focus,
+.admin-controls textarea:focus {
+    background: rgba(255, 255, 255, 0.97);
+
+    border-color: #79a4c4;
+
+    box-shadow:
+        0 0 0 3px rgba(75, 130, 169, 0.10);
+}
+
+
+/* ==================================================
+   ADMIN BUTTONS
+================================================== */
+
+.admin-controls button {
+    width: 100%;
+
+    min-height: 44px;
+
+    margin-top: 11px;
+
+    border-radius: 23px;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Update */
+
+#updateBtn {
+    border: none;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 18px rgba(50, 111, 159, 0.18);
+}
+
+#updateBtn:hover {
+    background: #285d88;
+
+    transform: translateY(-2px);
+}
+
+
+/* Delete */
+
+#deleteBtn {
+    border:
+        1px solid rgba(177, 83, 83, 0.20);
+
+    background: rgba(255, 245, 245, 0.78);
+
+    color: #a45757;
+}
+
+#deleteBtn:hover {
+    background: #fff0f0;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   CONVERSATION
+================================================== */
+
+main>section:last-child {
+    padding: 20px 17px;
+
+    background: rgba(255, 255, 255, 0.79);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 11px 30px rgba(38, 78, 111, 0.09);
+
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+
+/* Heading */
+
+main>section:last-child>h2 {
+    margin-bottom: 18px;
+
+    color: #214a68;
+
+    font-size: 21px;
+    font-weight: 650;
+}
+
+
+/* ==================================================
+   COMMENTS LIST
+================================================== */
+
+#commentsList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+
+/* ==================================================
+   COMMENT
+================================================== */
+
+.comment {
+    position: relative;
+
+    padding: 14px 15px 14px 18px;
+
+    background:
+        rgba(239, 248, 253, 0.84);
+
+    border:
+        1px solid rgba(75, 125, 160, 0.09);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+
+/* Left accent */
+
+.comment::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #5790b7;
+}
+
+
+/* Author */
+
+.comment h4 {
+    margin-bottom: 5px;
+
+    color: #315874;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+/* Message */
+
+.comment p {
+    margin: 0;
+
+    color: #5d7487;
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* Date */
+
+.comment small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #8698a5;
+
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   COMMENT FORM
+================================================== */
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+#commentInput {
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 12px;
+
+    border:
+        1px solid rgba(76, 126, 163, 0.12);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background:
+        rgba(232, 244, 252, 0.84);
+
+    color: #29445d;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#commentInput::placeholder {
+    color: #7c91a2;
+}
+
+#commentInput:focus {
+    background: #ffffff;
+
+    border-color: #79a4c4;
+
+    box-shadow:
+        0 0 0 3px rgba(75, 130, 169, 0.10);
+}
+
+
+/* ==================================================
+   SEND COMMENT
+================================================== */
+
+#commentBtn {
+    width: 100%;
+    height: 44px;
+
+    border: none;
+    border-radius: 23px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(50, 111, 159, 0.18);
+
+    transition: 0.2s ease;
+}
+
+#commentBtn:hover {
+    background: #285d88;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 650px) {
+
+    header {
+        padding: 18px 24px 0;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav>a {
+        font-size: 19px;
+    }
+
+    nav>div {
+        gap: 8px;
+    }
+
+    nav>div a {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    #logoutBtn {
+        min-height: 36px;
+        font-size: 10px;
+    }
+
+
+    main {
+        width: min(100% - 48px, 1050px);
+
+        padding-top: 28px;
+    }
+
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 26px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 25px;
+    }
+
+
+    .admin-controls>div {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 14px;
+        row-gap: 7px;
+    }
+
+
+    .admin-controls label:first-of-type {
+        grid-column: 1;
+    }
+
+    .admin-controls textarea {
+        grid-column: 1 / -1;
+    }
+
+
+    #updateBtn,
+    #deleteBtn {
+        width: auto;
+
+        padding: 0 28px;
+    }
+
+
+    .admin-controls button {
+        grid-column: auto;
+    }
+
+
+    #commentForm {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    #commentInput {
+        flex: 1;
+
+        min-height: 70px;
+    }
+
+    #commentBtn {
+        width: auto;
+
+        min-width: 135px;
+    }
+}
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 950px) {
+
+    header {
+        padding-top: 22px;
+    }
+
+    main {
+        width: min(100% - 70px, 1050px);
+    }
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 30px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 28px;
+    }
+
+
+    #ticketDetails p {
+        max-width: 850px;
+
+        font-size: 13px;
+    }
+
+
+    .admin-controls h2,
+    main>section:last-child>h2 {
+        font-size: 23px;
+    }
+
+
+    .admin-controls input,
+    .admin-controls select,
+    .admin-controls textarea {
+        font-size: 13px;
+    }
+
+
+    #commentInput {
+        font-size: 13px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 9px 9px 0;
+    }
+
+    nav {
+        padding: 11px 11px;
+        border-radius: 15px;
+    }
+
+    nav>a {
+        font-size: 15px;
+    }
+
+    nav>div {
+        gap: 2px;
+    }
+
+    nav>div a {
+        padding: 6px 5px;
+
+        font-size: 8px;
+    }
+
+    #logoutBtn {
+        min-height: 32px;
+
+        padding: 0 9px;
+
+        font-size: 8px;
+    }
+
+
+    main {
+        width: min(100% - 20px, 1050px);
+
+        padding-top: 18px;
+    }
+
+
+    main>section:first-child {
+        margin-bottom: 8px;
+    }
+
+
+    main>section:first-child a {
+        font-size: 10px;
+    }
+
+
+    #ticketDetails,
+    .admin-controls,
+    main>section:last-child {
+        padding: 17px 14px;
+
+        border-radius: 17px;
+    }
+
+
+    #ticketDetails h2 {
+        font-size: 20px;
+    }
+
+
+    #ticketDetails p {
+        font-size: 11px;
+    }
+
+
+    .admin-controls h2,
+    main>section:last-child>h2 {
+        font-size: 19px;
+    }
+
+
+    .badge {
+        min-height: 23px;
+
+        padding: 0 9px;
+
+        font-size: 8px;
+    }
+
+
+    .admin-controls input,
+    .admin-controls select {
+        height: 43px;
+    }
+
+
+    .admin-controls textarea {
+        min-height: 115px;
+    }
+
+
+    .comment {
+        padding: 13px 13px 13px 16px;
+    }
+
+
+    .comment h4 {
+        font-size: 11px;
+    }
+
+
+    .comment p {
+        font-size: 10px;
+    }
+
+
+    .comment small {
+        font-size: 8px;
+    }
+
+
+    #commentInput {
+        min-height: 80px;
+
+        font-size: 11px;
+    }
+
+
+    #commentBtn,
+    #updateBtn,
+    #deleteBtn {
+        min-height: 43px;
+
+        font-size: 10px;
+    }
+}
+
+/* =========================================
+   DELETE COMMENT BUTTON
+========================================= */
+
+.delete-comment {
+    margin-top: 12px;
+
+    padding: 7px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(220, 70, 70, 0.10);
+
+    color: #c53f3f;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.delete-comment:hover {
+    background: #c53f3f;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 12px rgba(197, 63, 63, 0.18);
+}
+
+
+.delete-comment:active {
+    transform: translateY(0);
+}
+
+
+.delete-comment:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}

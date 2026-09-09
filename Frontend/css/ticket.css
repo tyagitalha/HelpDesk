@@ -1,0 +1,401 @@
+/* ==================================================
+   CREATE TICKET
+   Premium Sky / Glass Theme
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #18364f;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(36, 91, 139, 0.16),
+            rgba(128, 184, 221, 0.14),
+            rgba(241, 248, 253, 0.94)
+        ),
+        url("../images/sky.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 25px 13px 45px;
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main {
+    width: 100%;
+    max-width: 620px;
+}
+
+
+/* ==================================================
+   PAGE HEADING
+================================================== */
+
+main > h1 {
+    margin-bottom: 20px;
+
+    color: #173d5d;
+
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* ==================================================
+   FORM CARD
+================================================== */
+
+#ticketForm {
+    width: 100%;
+
+    padding: 24px 19px;
+
+    background: rgba(255, 255, 255, 0.80);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.90);
+
+    border-radius: 21px;
+
+    box-shadow:
+        0 14px 35px rgba(39, 78, 111, 0.11);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* ==================================================
+   LABEL
+================================================== */
+
+#ticketForm label {
+    display: block;
+
+    margin-bottom: 7px;
+    margin-top: 15px;
+
+    color: #355a76;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+#ticketForm label:first-of-type {
+    margin-top: 0;
+}
+
+
+/* ==================================================
+   INPUT / SELECT / TEXTAREA
+================================================== */
+
+#ticketForm input,
+#ticketForm select,
+#ticketForm textarea {
+    width: 100%;
+
+    border: 1px solid rgba(76, 126, 163, 0.12);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(232, 244, 252, 0.82);
+
+    color: #29445d;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Input + Select */
+
+#ticketForm input,
+#ticketForm select {
+    height: 46px;
+    padding: 0 13px;
+}
+
+
+/* Textarea */
+
+#ticketForm textarea {
+    min-height: 150px;
+
+    padding: 12px 13px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+#ticketForm input::placeholder,
+#ticketForm textarea::placeholder {
+    color: #7b91a3;
+}
+
+
+/* Focus */
+
+#ticketForm input:focus,
+#ticketForm select:focus,
+#ticketForm textarea:focus {
+    background: rgba(255, 255, 255, 0.96);
+
+    border-color: #78a3c5;
+
+    box-shadow:
+        0 0 0 3px rgba(91, 139, 177, 0.10);
+}
+
+
+/* ==================================================
+   SELECT
+================================================== */
+
+#ticketForm select {
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   CREATE BUTTON
+================================================== */
+
+#ticketForm button {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 22px;
+
+    border: none;
+    border-radius: 24px;
+
+    background: #326f9f;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 20px rgba(50, 111, 159, 0.21);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#ticketForm button:hover {
+    background: #285e89;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(50, 111, 159, 0.25);
+}
+
+#ticketForm button:active {
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 650px) {
+
+    body {
+        padding: 38px 20px 60px;
+    }
+
+    main {
+        max-width: 680px;
+    }
+
+    main > h1 {
+        font-size: 36px;
+        margin-bottom: 23px;
+    }
+
+    #ticketForm {
+        padding: 31px 28px;
+
+        border-radius: 23px;
+    }
+
+    #ticketForm label {
+        font-size: 12px;
+    }
+
+    #ticketForm input,
+    #ticketForm select {
+        height: 48px;
+
+        font-size: 13px;
+    }
+
+    #ticketForm textarea {
+        min-height: 170px;
+
+        font-size: 13px;
+    }
+
+    #ticketForm button {
+        height: 48px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 950px) {
+
+    body {
+        padding-top: 55px;
+    }
+
+    main {
+        max-width: 720px;
+    }
+
+    main > h1 {
+        font-size: 40px;
+    }
+
+    #ticketForm {
+        padding: 34px;
+    }
+
+    #ticketForm input,
+    #ticketForm select {
+        height: 49px;
+    }
+
+    #ticketForm textarea {
+        min-height: 180px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 19px 10px 35px;
+    }
+
+    main > h1 {
+        font-size: 27px;
+    }
+
+    #ticketForm {
+        padding: 21px 15px;
+
+        border-radius: 18px;
+    }
+
+    #ticketForm label {
+        font-size: 11px;
+    }
+
+    #ticketForm input,
+    #ticketForm select {
+        height: 44px;
+
+        font-size: 12px;
+    }
+
+    #ticketForm textarea {
+        min-height: 135px;
+
+        font-size: 12px;
+    }
+
+    #ticketForm button {
+        height: 44px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #326f9f;
+
+    transition: 0.2s ease;
+}
+
+.back-link:hover {
+    color: #173f60;
+
+    transform: translateX(-2px);
+}
