@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user-ticket.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="dashboard.html">HelpDesk</a>
+
+            <div>
+                <a href="dashboard.html">HelpDesk</a>
+                <a href="tickets.html">My Tickets</a>
+                <a href="create-ticket.html">Create Ticket</a>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>My Ticket</h1>
+
+        <section class="filters">
+            <input type="text" name="" id="search">
+
+            <label for="category">Category</label>
+            <select name="" id="category">
+                <option value="">Select Category</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+                <option value="network">Network</option>
+                <option value="account">Account</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="priority">Priority</label>
+            <select name="" id="priority">
+                <option value="">Select Priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="status">Status</label>
+            <select name="" id="status">
+                <option value="">Select Status</option>
+                <option value="open">Open</option>
+                <option value="in-progress">In-Progress</option>
+                <option value="Resolved">Resolved</option>
+                <option value="closed">Closed</option>
+            </select>
+
+            <button id="applyFilters">Apply</button>
+
+            <section id="ticketList">
+            
+            </section>
+
+
+        </section>
+
+
+        <script src="../js/getTicket.js"></script>
+        <script src="../js/logout.js"></script>
+    </main>
+</body>
+
+</html>
