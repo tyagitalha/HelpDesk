@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function createTicket(title, category, priority, description) {
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/v1/ticket/createTicket", {
+            const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/ticket/createTicket", {
                 method: "POST",
                 credentials: "include",
                 headers: {
