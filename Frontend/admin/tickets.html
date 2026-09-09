@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Tickets</title>
+
+    <link rel="stylesheet" href="../css/admin-ticket.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <a href="dashboard.html">
+                HelpDesk Admin
+            </a>
+
+            <div>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="tickets.html">
+                    All Tickets
+                </a>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h1>
+                All Tickets
+            </h1>
+
+        </section>
+
+
+        <section class="filters">
+
+            <input type="text" id="searchInput" placeholder="Search tickets...">
+
+
+            <select id="statusFilter">
+
+                <option value="">
+                    All Status
+                </option>
+
+                <option value="open">
+                    Open
+                </option>
+
+                <option value="in progress">
+                    In Progress
+                </option>
+
+                <option value="resolved">
+                    Resolved
+                </option>
+
+
+            </select>
+
+
+            <select id="priorityFilter">
+
+                <option value="">
+                    All Priority
+                </option>
+
+                <option value="low">
+                    Low
+                </option>
+
+                <option value="medium">
+                    Medium
+                </option>
+
+                <option value="high">
+                    High
+                </option>
+
+            </select>
+
+
+            <select id="categoryFilter">
+
+                <option value="">
+                    All Categories
+                </option>
+
+                <option value="hardware">
+                    Hardware
+                </option>
+
+                <option value="software">
+                    Software
+                </option>
+
+                <option value="network">
+                    Network
+                </option>
+
+                <option value="account">
+                    Account
+                </option>
+
+                <option value="other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <button type="submit" id="applybtn">Apply</button>
+
+        </section>
+
+
+        <section id="ticketsList"></section>>
+
+    </main>
+
+
+    <script src="../js/logout.js"></script>
+    <script src="../js/admin-ticket.js"></script>
+
+</body>
+
+</html>
