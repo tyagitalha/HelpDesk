@@ -26,6 +26,7 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
         req.user = user
         next()
     } catch (error) {
-        throw new ApiError(500, "something wrong in auth")
+        console.error("VERIFY JWT ERROR:", error);
+        throw error;
     }
 })
