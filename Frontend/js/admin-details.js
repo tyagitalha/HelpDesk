@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function getOneTicket() {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/v1/admins/oneTicket/${ticketId}`, {
+            const response = await fetch(`https://helpdesk-3b70.onrender.com/api/v1/admins/oneTicket/${ticketId}`, {
                 method: "GET",
                 credentials: "include"
             })
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function getAdmin() {
         try {
             const response = await fetch(
-                "http://127.0.0.1:8000/api/v1/admins/allAdmin",
+                "https://helpdesk-3b70.onrender.com/api/v1/admins/allAdmin",
                 {
                     method: "GET",
                     credentials: "include"
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const assignTo = assignedTo.value
 
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/v1/admins/updateStatus/${ticketId}`, {
+            const response = await fetch(`https://helpdesk-3b70.onrender.com/api/v1/admins/updateStatus/${ticketId}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function getComment() {
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/v1/comment/getAllComment/${ticketId}`,
+                `https://helpdesk-3b70.onrender.com/api/v1/comment/getAllComment/${ticketId}`,
                 {
                     method: "GET",
                     credentials: "include"
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function deleteComment(commentId) {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/v1/comment/deleteComment/${commentId}`, {
+            const response = await fetch(`https://helpdesk-3b70.onrender.com/api/v1/comment/deleteComment/${commentId}`, {
                 method: "DELETE",
                 credentials: "include"
             })
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     async function createComment(message) {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/v1/comment/createComment/${ticketId}`, {
+            const response = await fetch(`https://helpdesk-3b70.onrender.com/api/v1/comment/createComment/${ticketId}`, {
                 method: "POST",
                 credentials: "include",
                 headers: {
