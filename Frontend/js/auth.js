@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function registerUser(username, fullName, email, password) {
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/v1/users/register", {
+            const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/users/register", {
                 method: "POST",
                 credentials: "include",
                 headers: {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function loginUser(email, password) {
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/v1/users/login", {
+            const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/users/login", {
                 method: "POST",
                 credentials: "include",
                 headers: {
