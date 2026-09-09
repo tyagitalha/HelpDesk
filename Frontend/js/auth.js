@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (password !== confirmpassword) {
             alert("Passwords do not match")
-            return
+            return 
         }
 
         await registerUser(username, fullName, email, password)

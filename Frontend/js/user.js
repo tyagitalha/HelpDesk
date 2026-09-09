@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!username) return
 
-   
+
     let userData
     try {
         const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/users/current-user", {
             method: "GET",
             credentials: "include"
-        }) 
-
+        })
+        alert("current-user status: " + response.status);
         if (!response.ok) {
             window.location.href = "../login.html"
             return
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const ticketData = await ticketResponse.json()
 
         const tickets = ticketData.data
-       
+
 
         totalTicket.textContent = tickets.length
         openTicket.textContent = tickets.filter(t => t.status === "open").length

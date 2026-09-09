@@ -17,7 +17,6 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
             throw new ApiError(400, "not verify access token")
         }
 
-        console.log("COOKIE TOKEN:", req.cookies?.accessToken)
         const user = await User.findById(decodedToken?._id).select("-password -refreshToken")
 
         if (!user) {
