@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     let userData
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/v1/admins/current-user", {
+        const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/admins/current-user", {
             method: "GET",
             credentials: "include",
             cache: "no-store"
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/v1/admins/allTicket", {
+        const response = await fetch("https://helpdesk-3b70.onrender.com/api/v1/admins/allTicket", {
             method: "GET",
             credentials: "include"
         })
