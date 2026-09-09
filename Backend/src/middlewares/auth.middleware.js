@@ -5,8 +5,10 @@ import jwt from "jsonwebtoken"
 
 export const verifyJWT = asyncHandler(async (req, res, next) => {
     try {
-        const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "")
 
+        console.log("COOKIE RECEIVED:", !!req.cookies?.accessToken)
+        const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "")
+            
         if (!token) {
             throw new ApiError(400, "Toekn not access")
         }

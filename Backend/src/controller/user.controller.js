@@ -114,7 +114,10 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const { accessToken, refreshToken } = await genreateAccessAndRefreshToken(user._id)
 
-
+    console.log("LOGIN COOKIES:", {
+        accessToken: !!accessToken,
+        refreshToken: !!refreshToken
+    })
 
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken").populate("fullName")
 
