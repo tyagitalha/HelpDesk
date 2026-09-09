@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard</title>
+
+   
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <a href="dashboard.html">
+                HelpDesk Admin
+            </a>
+
+            <div>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="tickets.html">
+                    All Tickets
+                </a>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h1>
+                Welcome,
+                <span id="username"></span>
+            </h1>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div>
+
+                <h3>
+                    Total Tickets
+                </h3>
+
+                <p id="totalTickets">
+                    0
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Open
+                </h3>
+
+                <p id="openTickets">
+                    0
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    In Progress
+                </h3>
+
+                <p id="inProgressTickets">
+                    0
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Resolved
+                </h3>
+
+                <p id="resolvedTickets">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                Recent Tickets
+            </h2>
+
+            <div id="recentTickets">
+                
+            </div>
+
+        </section>
+
+    </main>
+
+ 
+    <script src="../js/admin.js"></script>
+    <script src="../js/logout.js"></script>
+
+</body>
+</html>     
