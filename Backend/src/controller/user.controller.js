@@ -22,8 +22,6 @@ const genreateAccessAndRefreshToken = async (userId) => {
         return { accessToken, refreshToken };
 
     } catch (error) {
-        console.log("TOKEN GENERATION ERROR:", error);
-
         throw new ApiError(
             500,
             "Something went wrong while generating access and refresh"
@@ -66,9 +64,8 @@ const registerUser = asyncHandler(async (req, res) => {
         }
     )
 
-    console.log("user", user);
-
     const createdUser = await User.findById(user._id).select("-password -refreshToken")
+
     if (!createdUser) {
         throw new ApiError(500, "something went wrong while registring the user")
     }
@@ -149,7 +146,7 @@ const logout = asyncHandler(async (req, res) => {
     )
     const options = {
         httpOnly: true,
-        secure: true
+        secure: false
     }
 
     return res
