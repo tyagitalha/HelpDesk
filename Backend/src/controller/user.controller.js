@@ -13,12 +13,10 @@ const genreateAccessAndRefreshToken = async (userId) => {
         const accessToken = await user.generateAccessToken();
         const refreshToken = await user.generateRefreshToken();
 
-
         user.refreshToken = refreshToken;
 
         await user.save({ validateBeforeSave: false });
-        // await user.save()
-
+    
         return { accessToken, refreshToken };
 
     } catch (error) {
@@ -92,7 +90,6 @@ const loginUser = asyncHandler(async (req, res) => {
     const { email, username, role, password } = req.body
 
 
-
     if (!(email || username)) {
         throw new ApiError(400, "email and username is invalid")
     }
@@ -114,18 +111,13 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const { accessToken, refreshToken } = await genreateAccessAndRefreshToken(user._id)
 
-    console.log("LOGIN COOKIES:", {
-        accessToken: !!accessToken,
-        refreshToken: !!refreshToken
-    })
 
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken").populate("fullName")
 
     const options = {
         httpOnly: true,
         secure: true,
-        sameSite: "none",
-        path: "/"
+        sameSite: "none"
     }
 
     return res
