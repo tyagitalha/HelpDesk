@@ -51,7 +51,8 @@ const registerUser = asyncHandler(async (req, res) => {
 
     const options = {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: "none"
     }
 
     const user = await User.create(
@@ -119,7 +120,8 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const options = {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: "none"
     }
 
     return res
@@ -146,7 +148,8 @@ const logout = asyncHandler(async (req, res) => {
     )
     const options = {
         httpOnly: true,
-        secure: false
+        secure: true,
+        sameSite: "none"
     }
 
     return res
