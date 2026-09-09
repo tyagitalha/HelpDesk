@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user-ticket-detail.css">
+    <link rel="stylesheet" href="../css/style.css">
+   
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="dashboard.html">HelpDesk</a>
+
+            <div>
+                <a href="dashboard.html">Helpesk</a>
+                <a href="tickets.html">My tickets</a>
+                <a href="create-ticket.html">Create Ticket</a>
+                <button id="logoutBtn">Logout</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+
+            <a href="tickets.html">
+                ← Back to Tickets
+            </a>
+
+        </section>
+
+
+
+        <section id="ticketDetails">
+
+        </section>
+        <section class="admin-controls">
+            <h2>
+                Update Ticket
+            </h2>
+
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="" id="title" placeholder="Update Title">
+
+                <label for="description">Description</label>
+                <textarea name="" id="description"></textarea>
+
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="category">Categories</label>
+                <select name="" id="category">
+                    <option value="hardware">Hardware</option>
+                    <option value="software">Software</option>
+                    <option value="network">Network</option>
+                    <option value="account">Account</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit" id="updateBtn">Update</button>
+                <button type="submit" id="deleteBtn">Delete</button>
+            </div>
+        </section>
+
+
+        <section>
+
+            <h2>
+                Conversation
+            </h2>
+
+
+            <div id="commentsList">
+            </div>
+
+
+            <form id="commentForm">
+
+                <textarea id="commentInput" placeholder="Write a comment..." required></textarea>
+
+                <button type="submit" id="commentBtn">
+                    Send Comment
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="../js/detail-ticket.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+
+</html>
