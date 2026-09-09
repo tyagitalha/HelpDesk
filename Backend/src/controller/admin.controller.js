@@ -10,8 +10,8 @@ const allTicket = asyncHandler(async (req, res) => {
         .populate("createdBy", "fullName")
         .populate("assignTo", "fullName email")
         .sort({ createdAt: -1 });
-    
-        
+
+
     if (!ticket) {
         throw new ApiError(404, "not access all ticket")
     }
@@ -25,13 +25,13 @@ const allTicket = asyncHandler(async (req, res) => {
 
 const oneticket = asyncHandler(async (req, res) => {
     const { ticketId } = req.params
-    
+
     const ticket = await Ticket.find(
         {
             _id: ticketId
         }
     )
- 
+
 
     return res.status(200)
         .json(
@@ -80,7 +80,7 @@ const getTicket = asyncHandler(async (req, res) => {
             .limit(limitNumber)
             .sort({ createdAt: -1 })
 
-        
+
 
         return res.status(200).json(new ApiResponse(200, { tickets: ticket }, "Tickets fetched successfully"))
     } catch (error) {
@@ -129,7 +129,7 @@ const update = asyncHandler(async (req, res) => {
 const assignTicket = asyncHandler(async (req, res) => {
 
     const { ticketId } = req.params
-   
+
 
     const user = await User.find(
         user?.role === "Admin"
@@ -149,7 +149,7 @@ const assignTicket = asyncHandler(async (req, res) => {
         }
     )
 
- 
+
 
     if (!ticket) {
         throw new ApiError(400, "ticket are invalid ")
@@ -166,7 +166,7 @@ const allAdmin = asyncHandler(async (req, res) => {
     const user = await User.find(
         { role: "Admin" }
     )
-   
+
     return res.status(200)
         .json(new ApiResponse(200, { Admin: user }, "All Admin fetch SuccessFully"))
 })
