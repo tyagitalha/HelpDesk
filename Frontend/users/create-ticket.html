@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ticket.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+        
+        <h1>Create New Ticket</h1>
+
+        <form id="ticketForm">
+            <label for="title">Title</label>
+            <input type="text" id="title" required>
+
+            <label for="category">Category</label>
+            <select name="" id="category">
+                <option value="">Select Category</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+                <option value="network">Network</option>
+                <option value="account">Account</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="priority">Priority</label>
+            <select name="" id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="8" required></textarea>
+
+            <button type="submit">Create Ticket</button>
+        </form>
+    </main>
+
+    <script src="../js/tickets.js"></script>
+
+</body>
+
+</html>
