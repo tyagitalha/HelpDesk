@@ -44,7 +44,10 @@ const getAllTicket = asyncHandler(async (req, res) => {
         throw new ApiError(401, "User id not Access")
     }
 
-    const ticketId = await Ticket.find()
+    const ticketId = await Ticket.find({
+        createdBy : user
+
+    })
         .populate("createdBy", "fullName email")
         .populate("assignTo", "fullName email")
         .sort({ createdAt: -1 });
