@@ -45,7 +45,7 @@ const getAllTicket = asyncHandler(async (req, res) => {
     }
 
     const ticketId = await Ticket.find({
-        createdBy : user
+        createdBy: user
 
     })
         .populate("createdBy", "fullName email")
@@ -150,19 +150,32 @@ const updateTicket = asyncHandler(async (req, res) => {
     const userId = req.user?._id;
     const { ticketId } = req.params;
 
-    
+    const updates = {};
+
+    if (title !== undefined && title.trim() !== "") {
+        updates.title = title.trim();
+    }
+
+    if (description !== undefined && description.trim() !== "") {
+        updates.description = description.trim();
+    }
+
+    if (priority !== undefined && priority.trim() !== "") {
+        updates.priority = priority.trim();
+    }
+
+    if (category !== undefined && category.trim() !== "") {
+        updates.category = category.trim();
+    }
+
+
     const ticket = await Ticket.findOneAndUpdate(
         {
             _id: ticketId,
             createdBy: userId,
         },
         {
-            $set: {
-                title,
-                description,
-                priority,
-                category,
-            },
+            $set: updates
         },
         {
             returnDocument: "after",
@@ -204,7 +217,7 @@ const deleteTicket = asyncHandler(async (req, res) => {
     return res.status(200).json(
         new ApiResponse(
             200,
-            {ticket},
+            { ticket },
             "Ticket deleted successfully"
         )
     );
