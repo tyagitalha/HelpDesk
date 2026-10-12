@@ -30,7 +30,7 @@ const oneticket = asyncHandler(async (req, res) => {
         {
             _id: ticketId
         }
-    )
+    ).populate("createdBy","fullName")
 
 
     return res.status(200)
