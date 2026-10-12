@@ -1,242 +1,116 @@
-# Helpdesk Ticket System
+# Helpdesk Ticket Management System
 
-A full-stack Helpdesk / Support Ticket System built as a learning project.
+A full-stack Helpdesk Ticket Management System that allows users to create and manage support tickets while administrators can manage and track ticket activity.
 
-## Goal
+This project was initially built with **Vanilla JavaScript** for the frontend. A **React-based frontend** is also being developed to improve component reusability and frontend architecture.
 
-Understand how a real full-stack application works:
+## Project Overview
 
-```text
-Frontend → API → Backend → Authentication → Authorization → Database
-```
+The Helpdesk system provides a structured way to manage support requests, track ticket status, and organize tickets by category and priority.
+
+### Features
+
+- User registration and login
+- JWT-based authentication with access and refresh tokens
+- Protected routes and role-based authorization
+- Create, view, update, and delete tickets
+- Search tickets by relevant text
+- Filter tickets by category, status, and priority
+- Pagination for ticket listings
+- Ticket comments
+- Administrative ticket management
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, Vanilla JavaScript
-- Backend: Node.js, Express.js
-- Database: MongoDB, Mongoose
-- Authentication: Register, Login, Logout, Password Hashing, JWT or Sessions
-- Tools: Git, GitHub, Postman/Bruno, MongoDB Atlas or local MongoDB
+### Frontend — Vanilla JavaScript
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Fetch API
 
-> React is not used.
+### Frontend — React
+- React.js
+- Component-based UI development
+- API integration
 
-## User Roles
+*React frontend implementation status: [In Progress]*
 
-### User
-- Register / Login / Logout
-- Create tickets
-- View own tickets
-- Open own tickets
-- Update permitted information
-- Delete permitted tickets
-- Participate in ticket conversations
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- Middleware
 
-### Admin
-- View all tickets
-- View any ticket
-- Change status
-- Change priority
-- See ticket creator
-- Assign tickets
+### Database
+- MongoDB
+- Mongoose
 
-## Authentication vs Authorization
+### Tools
+- Git and GitHub
+- Postman
+- npm
 
-**Authentication:** Who are you?
+## Frontend Versions
 
-**Authorization:** Are you allowed to do this?
+### 1. Vanilla JavaScript Version
 
-Example:
+The original frontend was developed using HTML, CSS, and plain JavaScript without a frontend framework. It communicates with the Express backend through API requests.
 
-```text
-Talha owns Ticket #101
-        ↓
-Samiullah requests Ticket #101
-        ↓
-Backend checks permission
-        ↓
-Access denied
-```
+### 2. React Version
 
-Authorization must be enforced by the backend.
+The React frontend is being developed as a separate implementation of the same Helpdesk application. The goal is to organize the UI into reusable components and manage application state using React.
 
-## Ticket
+**Note:** Update this section to reflect the actual completion status and features of the React version.
 
-A ticket contains:
-
-- Title
-- Description
-- Category
-- Priority
-- Status
-- Creator
-- Assigned To
-- Created Date
-
-### Categories
-- Hardware
-- Software
-- Network
-- Account
-- Other
-
-### Priority
-- Low
-- Medium
-- High
-
-### Status
-- Open
-- In Progress
-- Resolved
-- Closed
-
-New tickets start as `Open`.
-
-## Database Relationships
+## Project Structure
 
 ```text
-USER
-│
-├── role: USER
-└── role: ADMIN
+helpdesk/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── middleware/
+├── frontend/
+│   └── Vanilla JavaScript frontend
+├── react-frontend/
+│   └── React frontend (if maintained separately)
+└── README.md
 ```
 
-```text
-USER
-  │
-  │ creates
-  ↓
-TICKET
-```
+*The structure above is illustrative. Adjust folder names to match the actual repository.*
 
-```text
-TICKET
-  │
-  │ assignedTo
-  ↓
-USER (ADMIN)
-```
+## Getting Started
 
-```text
-USER
-  │
-  │ writes
-  ↓
-COMMENT
-  │
-  │ belongs to
-  ↓
-TICKET
-```
+1. Clone the repository.
+2. Install backend dependencies.
+3. Configure environment variables.
+4. Connect the application to MongoDB.
+5. Start the backend server.
+6. Run the frontend version you want to use.
 
-## Main Application Flow
+Refer to the backend configuration and scripts in the repository for the exact commands and required environment variables.
 
-```text
-User
-  ↓
-Frontend
-  ↓
-HTTP Request
-  ↓
-Express Route
-  ↓
-Middleware
-  ↓
-Controller
-  ↓
-Mongoose
-  ↓
-MongoDB
-  ↓
-Response
-  ↓
-Frontend
-```
+## Learning Outcomes
 
-Important middleware concepts:
+- Building REST APIs with Node.js and Express.js
+- Working with MongoDB and Mongoose
+- Implementing authentication and authorization
+- Connecting frontend applications to backend APIs
+- Managing search, filtering, and pagination
+- Learning the transition from Vanilla JavaScript to React
 
-- Authentication
-- Authorization
-- Validation
-- Error handling
+## Future Improvements
 
-## MVP
+- Complete and refine the React frontend
+- Improve responsive UI and user experience
+- Add automated tests
+- Improve error handling and validation
 
-First target:
+## Author
 
-```text
-Register
-   ↓
-Login
-   ↓
-Create Ticket
-   ↓
-Save in MongoDB
-   ↓
-View My Tickets
-   ↓
-Open Ticket
-   ↓
-Another user cannot access it
-```
+**MD Talha**
 
-## Feature Roadmap
-
-1. Authentication
-2. Ticket CRUD
-3. Authorization and ownership
-4. Admin functionality
-5. Comments
-6. Search and filters
-7. Pagination
-8. Admin dashboard
-9. Testing and security
-10. Deployment
-
-## Development Method
-
-For every feature:
-
-```text
-Discuss
-   ↓
-Understand
-   ↓
-Plan the flow
-   ↓
-Implement
-   ↓
-Test
-   ↓
-Debug
-   ↓
-Review
-```
-
-The goal is not only:
-
-> "My Helpdesk works."
-
-The goal is:
-
-> **"I understand my Helpdesk from the browser all the way to MongoDB."**
-
-
-## Security Requirements
-
-- Hash passwords
-- Protect authenticated routes
-- Enforce authorization in backend
-- Protect admin functionality
-- Do not trust user IDs from frontend
-- Do not expose secrets
-- Do not commit `.env` to GitHub
-
-## Required Screens
-
-- Register
-- Login
-- User dashboard
-- Create ticket
-- Ticket details
-- Admin dashboard
+GitHub: [tyagitalha](https://github.com/tyagitalha)
