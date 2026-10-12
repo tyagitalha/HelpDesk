@@ -129,7 +129,7 @@ const getOneTicket = asyncHandler(async (req, res) => {
                 _id: ticketId,
                 createdBy: user
             }
-        )
+        ).populate("assignTo","fullName")
 
 
         if (!ticket) {
