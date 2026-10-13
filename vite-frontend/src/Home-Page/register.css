@@ -1,0 +1,97 @@
+.regsiterBox {
+  width: 100%;
+  max-width: 440px;
+  margin: 48px auto;
+  padding: 32px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(23, 25, 54, 0.07);
+  font-family: Roboto, Arial, sans-serif;
+  color: #171936;
+}
+
+.regsiterBox h2 {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Form Layout */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-form label {
+  margin-top: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.register-form input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #171936;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-form input::placeholder {
+  color: #9ca3af;
+}
+
+.register-form input:focus {
+  border-color: #5146e5;
+  box-shadow: 0 0 0 3px rgba(81, 70, 229, 0.12);
+}
+
+/* Submit Button */
+
+.register-form button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 18px;
+  padding: 0 16px;
+  border: 1px solid #5146e5;
+  border-radius: 7px;
+  background: #5146e5;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-form button:hover {
+  background: #4035c9;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+  .regsiterBox {
+    width: calc(100% - 32px);
+    margin: 28px auto;
+    padding: 24px 20px;
+  }
+
+  .regsiterBox h2 {
+    font-size: 23px;
+    margin-bottom: 22px;
+  }
+}
