@@ -1,0 +1,169 @@
+
+.ticket-card {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #e5e5f0;
+  border-radius: 12px;
+
+  font-family: Roboto, Arial, sans-serif;
+  color: #25263b;
+
+  transition: border-color 0.2s ease;
+}
+
+.ticket-card:hover {
+  border-color: #c5c1f7;
+}
+
+.ticket-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ticket-title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ticket-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.status-open {
+  background: #e8f2ff;
+  color: #2459a9;
+}
+
+.status-in-progress {
+  background: #fff1d6;
+  color: #925b00;
+}
+
+.status-resolved,
+.status-closed {
+  background: #e5f7eb;
+  color: #207344;
+}
+
+.ticket-created-by {
+  margin: 12px 0;
+  color: #77788b;
+  font-size: 13px;
+}
+
+.ticket-description {
+  margin: 0 0 22px;
+  color: #606176;
+  font-size: 14px;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.ticket-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+
+  padding: 18px 0;
+  border-top: 1px solid #eeeeF5;
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.ticket-meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ticket-meta-item span {
+  color: #85869a;
+  font-size: 12px;
+}
+
+.ticket-meta-item strong {
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ticket-priority {
+  text-transform: capitalize;
+}
+
+.priority-high {
+  color: #d13c43;
+}
+
+.priority-medium {
+  color: #b77916;
+}
+
+.priority-low {
+  color: #278052;
+}
+
+.ticket-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.ticket-view-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+
+  background: #5146e5;
+  color: #ffffff;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ticket-view-btn:hover {
+  background: #4035ca;
+}
+
+.ticket-view-btn:focus-visible {
+  outline: 2px solid #5146e5;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 18px;
+  }
+
+  .ticket-title {
+    font-size: 17px;
+  }
+
+  .ticket-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
