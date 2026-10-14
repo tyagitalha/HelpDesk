@@ -30,7 +30,7 @@ const oneticket = asyncHandler(async (req, res) => {
         {
             _id: ticketId
         }
-    ).populate("createdBy","fullName")
+    ).populate("createdBy", "fullName")
 
 
     return res.status(200)
@@ -75,7 +75,7 @@ const getTicket = asyncHandler(async (req, res) => {
 
         filter.createdBy = user
         const ticket = await Ticket.find(filter)
-            .populate("createdBy", "fullName", "email")
+            .populate("createdBy", "fullName email")
             .skip(skip)
             .limit(limitNumber)
             .sort({ createdAt: -1 })
