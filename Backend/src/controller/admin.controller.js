@@ -108,7 +108,7 @@ const update = asyncHandler(async (req, res) => {
             }
         },
         {
-            new: true,
+           returnDocument : "after",
             runValidators: true
         }
     )
