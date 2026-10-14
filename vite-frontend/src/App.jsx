@@ -1,4 +1,4 @@
-import './App.css'
+
 import Landing from './Home-Page/Landing'
 import Login from './Home-Page/login'
 import Register from './Home-Page/register'
@@ -11,6 +11,7 @@ import Dashboard from './Admin/Dashboard'
 import Tickets from './Admin/Tickets'
 import AdminTicketDetails from './Admin/Admin.Ticket-Details'
 import Logout from './components/Logout'
+import About from './Home-Page/About'
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/adminDashboard' element={<Dashboard />} />
             <Route path='/adminticketdetail/:ticketId' element={<AdminTicketDetails />}/>
             <Route path='/logout' element={<Logout />} />
+            <Route path='/about' element={<About />} />
         </Routes>
     )
 }
